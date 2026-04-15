@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luxury Watches - Premium Timepieces</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">TIMEPIECE</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#collection">Collection</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="auth-cart-section">
+                <button class="auth-btn" id="signInBtn">Sign In</button>
+                <button class="auth-btn signup-btn" id="signUpBtn">Sign Up</button>
+                <div class="user-section" style="display: none;">
+                    <span class="user-name"></span>
+                    <button class="logout-btn">Logout</button>
+                </div>
+                <div class="cart">
+                    <span class="cart-icon">🛒</span>
+                    <span class="cart-count">0</span>
+                </div>
+                <button class="checkout-btn">Checkout</button>
+            </div>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Timeless Elegance</h1>
+            <p>Discover our collection of premium watches crafted for those who appreciate fine craftsmanship</p>
+            <a href="#collection" class="cta-button">Explore Collection</a>
+        </div>
+    </section>
+
+    <section id="collection" class="products">
+        <h2>Our Collection</h2>
+        <div class="products-container">
+            <aside class="categories-sidebar">
+                <h3>Categories</h3>
+                <ul class="category-list">
+                    <li><button class="category-btn active" data-category="all">All Watches</button></li>
+                    <li><button class="category-btn" data-category="luxury">Luxury</button></li>
+                    <li><button class="category-btn" data-category="sport">Sport</button></li>
+                    <li><button class="category-btn" data-category="casual">Casual</button></li>
+                    <li><button class="category-btn" data-category="dress">Dress</button></li>
+                </ul>
+            </aside>
+
+            <div class="product-grid">
+                <div class="product-card" data-category="luxury">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=500&h=500&fit=crop" alt="Classic Gold Watch">
+                        <span class="badge">New</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>Classic Gold</h3>
+                        <p class="description">Elegant gold-plated timepiece with leather strap</p>
+                        <p class="price">$1,299</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="sport">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1524805444758-089113d48a6d?w=500&h=500&fit=crop" alt="Sport Chronograph">
+                    </div>
+                    <div class="product-info">
+                        <h3>Sport Chronograph</h3>
+                        <p class="description">Professional diving watch with 200m water resistance</p>
+                        <p class="price">$2,499</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="casual">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1533139502658-0198f920d8e8?w=500&h=500&fit=crop" alt="Minimalist Silver">
+                        <span class="badge">Bestseller</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>Minimalist Silver</h3>
+                        <p class="description">Clean design with stainless steel mesh band</p>
+                        <p class="price">$899</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="dress">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?w=500&h=500&fit=crop" alt="Vintage Brown">
+                    </div>
+                    <div class="product-info">
+                        <h3>Vintage Brown</h3>
+                        <p class="description">Classic design with genuine leather strap</p>
+                        <p class="price">$1,599</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="sport">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1509048191080-d2984bad6ae5?w=500&h=500&fit=crop" alt="Black Titanium">
+                        <span class="badge">Limited</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>Black Titanium</h3>
+                        <p class="description">Lightweight titanium case with sapphire crystal</p>
+                        <p class="price">$3,299</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="luxury">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1587836374828-4dbafa94cf0e?w=500&h=500&fit=crop" alt="Rose Gold Elegance">
+                    </div>
+                    <div class="product-info">
+                        <h3>Rose Gold Elegance</h3>
+                        <p class="description">Sophisticated rose gold finish with diamond markers</p>
+                        <p class="price">$2,899</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="casual">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?w=500&h=500&fit=crop" alt="Blue Dial Casual">
+                    </div>
+                    <div class="product-info">
+                        <h3>Blue Dial Casual</h3>
+                        <p class="description">Modern blue dial with stainless steel bracelet</p>
+                        <p class="price">$1,099</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="dress">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1614164185128-e4ec99c436d7?w=500&h=500&fit=crop" alt="Elegant Dress Watch">
+                    </div>
+                    <div class="product-info">
+                        <h3>Elegant Dress Watch</h3>
+                        <p class="description">Ultra-thin case perfect for formal occasions</p>
+                        <p class="price">$1,799</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="about-content">
+            <h2>Craftsmanship & Quality</h2>
+            <p>For over 50 years, we've been dedicated to creating timepieces that combine traditional craftsmanship with modern innovation. Each watch is meticulously assembled by master watchmakers.</p>
+            <div class="features">
+                <div class="feature">
+                    <span class="icon">⚙️</span>
+                    <h3>Swiss Movement</h3>
+                    <p>Precision engineering</p>
+                </div>
+                <div class="feature">
+                    <span class="icon">💎</span>
+                    <h3>Premium Materials</h3>
+                    <p>Finest quality components</p>
+                </div>
+                <div class="feature">
+                    <span class="icon">🛡️</span>
+                    <h3>5-Year Warranty</h3>
+                    <p>Complete peace of mind</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Get in Touch</h2>
+        <form class="contact-form">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" rows="5" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Timepiece. All rights reserved.</p>
+        <div class="social-links">
+            <a href="#">Facebook</a>
+            <a href="#">Instagram</a>
+            <a href="#">Twitter</a>
+        </div>
+    </footer>
+
+    <!-- Cart Modal -->
+    <div id="cartModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Shopping Cart</h2>
+                <span class="close-modal">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div id="cartItems"></div>
+                <div class="cart-total">
+                    <h3>Total: <span id="totalPrice">$0</span></h3>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="continue-shopping">Continue Shopping</button>
+                <button class="place-order">Place Order</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sign In Modal -->
+    <div id="signInModal" class="modal">
+        <div class="modal-content auth-modal">
+            <div class="modal-header">
+                <h2>Sign In</h2>
+                <span class="close-modal close-signin">&times;</span>
+            </div>
+            <div class="modal-body">
+                <form id="signInForm" class="auth-form">
+                    <div class="form-group">
+                        <label for="signInEmail">Email</label>
+                        <input type="email" id="signInEmail" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="signInPassword">Password</label>
+                        <input type="password" id="signInPassword" required>
+                    </div>
+                    <button type="submit" class="auth-submit-btn">Sign In</button>
+                    <p class="auth-switch">Don't have an account? <span class="switch-link" id="switchToSignUp">Sign Up</span></p>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sign Up Modal -->
+    <div id="signUpModal" class="modal">
+        <div class="modal-content auth-modal">
+            <div class="modal-header">
+                <h2>Sign Up</h2>
+                <span class="close-modal close-signup">&times;</span>
+            </div>
+            <div class="modal-body">
+                <form id="signUpForm" class="auth-form">
+                    <div class="form-group">
+                        <label for="signUpName">Full Name</label>
+                        <input type="text" id="signUpName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="signUpEmail">Email</label>
+                        <input type="email" id="signUpEmail" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="signUpPassword">Password</label>
+                        <input type="password" id="signUpPassword" required minlength="6">
+                    </div>
+                    <div class="form-group">
+                        <label for="signUpConfirmPassword">Confirm Password</label>
+                        <input type="password" id="signUpConfirmPassword" required minlength="6">
+                    </div>
+                    <button type="submit" class="auth-submit-btn">Sign Up</button>
+                    <p class="auth-switch">Already have an account? <span class="switch-link" id="switchToSignIn">Sign In</span></p>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
