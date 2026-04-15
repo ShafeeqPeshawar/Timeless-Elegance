@@ -742,6 +742,46 @@ footer {
     text-decoration: underline;
 }
 
+/* Error Modal Styles */
+.error-modal {
+    max-width: 400px;
+    text-align: center;
+    padding: 2rem;
+}
+
+.error-icon {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+.error-title {
+    font-size: 1.5rem;
+    color: #1a1a1a;
+    margin-bottom: 1rem;
+}
+
+.error-message {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+.error-btn {
+    padding: 0.8rem 3rem;
+    background: #ff4444;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+    font-weight: bold;
+}
+
+.error-btn:hover {
+    background: #cc0000;
+}
+
 @media (max-width: 768px) {
     .nav-links {
         gap: 1rem;

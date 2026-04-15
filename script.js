@@ -28,6 +28,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const userSection = document.querySelector('.user-section');
     const userNameElement = document.querySelector('.user-name');
     const logoutBtn = document.querySelector('.logout-btn');
+    const errorModal = document.getElementById('errorModal');
+    const errorOkBtn = document.getElementById('errorOkBtn');
 
     // Check if user is already logged in
     const savedUser = localStorage.getItem('currentUser');
@@ -53,6 +55,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
     closeSignUp.addEventListener('click', function() {
         signUpModal.classList.remove('show');
+    });
+
+    // Close error modal
+    errorOkBtn.addEventListener('click', function() {
+        errorModal.classList.remove('show');
+        signInModal.classList.add('show');
     });
 
     // Switch between Sign In and Sign Up
@@ -170,8 +178,7 @@ document.addEventListener('DOMContentLoaded', function() {
         button.addEventListener('click', function() {
             // Check if user is logged in
             if (!currentUser) {
-                alert('Please sign in to add items to cart!');
-                signInModal.classList.add('show');
+                errorModal.classList.add('show');
                 return;
             }
 
@@ -212,8 +219,7 @@ document.addEventListener('DOMContentLoaded', function() {
     checkoutBtn.addEventListener('click', function() {
         // Check if user is logged in
         if (!currentUser) {
-            alert('Please sign in to view your cart!');
-            signInModal.classList.add('show');
+            errorModal.classList.add('show');
             return;
         }
 
@@ -240,6 +246,9 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         if (event.target === signUpModal) {
             signUpModal.classList.remove('show');
+        }
+        if (event.target === errorModal) {
+            errorModal.classList.remove('show');
         }
     });
 
